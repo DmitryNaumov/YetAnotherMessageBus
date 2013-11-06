@@ -1,2 +1,2 @@
-YetAnotherMessageBus
+Yet Another Message Bus
 ====================
