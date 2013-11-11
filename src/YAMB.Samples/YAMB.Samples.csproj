@@ -40,6 +40,15 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.1.5\lib\net40\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -58,12 +67,17 @@
     <Compile Include="AutofacIntegration.cs" />
     <Compile Include="Messages\PingMessage.cs" />
     <Compile Include="Messages\PongMessage.cs" />
+    <Compile Include="NHibernateIntegration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YAMB.Autofac\YAMB.Autofac.csproj">
       <Project>{1ecc8945-db28-468d-b7dd-aede01038e2c}</Project>
       <Name>YAMB.Autofac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YAMB.NHibernateIntegration\YAMB.NHibernateIntegration.csproj">
+      <Project>{0a84e7ab-c451-429a-b864-6b63f45a8a6c}</Project>
+      <Name>YAMB.NHibernateIntegration</Name>
     </ProjectReference>
     <ProjectReference Include="..\YAMB\YAMB.csproj">
       <Project>{5C8822DB-29AD-4790-A5EA-A925DF0B13EE}</Project>

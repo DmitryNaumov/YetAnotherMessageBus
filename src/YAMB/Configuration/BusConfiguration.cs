@@ -11,6 +11,7 @@ namespace YAMB.Configuration
     {
         private string _connectionString;
         private Func<ISubscriptionManager> _subscriptionManager = () => new SubscriptionManager();
+        private Func<ITransactionFactory> _transactionFactory; 
         
         public BusConfiguration ConnectionString(string connectionString)
         {
@@ -39,9 +40,16 @@ namespace YAMB.Configuration
             return this;
         }
 
+        public BusConfiguration TransactionFactory(ITransactionFactory transactionFactory)
+        {
+            _transactionFactory = () => transactionFactory;
+
+            return this;
+        }
+
         public IBusService Build()
         {
-            var transactionFactory = new AdoNetTransactionFactory(_connectionString);
+            var transactionFactory = _transactionFactory != null ? _transactionFactory() : new AdoNetTransactionFactory(_connectionString);
             var queue = new MsSqlMessageQueue("Messages", transactionFactory);
             var serializer = new JsonMessageSerializer();
             var endpoint = new Endpoint(queue, serializer);

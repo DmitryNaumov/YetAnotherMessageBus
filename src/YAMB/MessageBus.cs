@@ -14,6 +14,7 @@ namespace YAMB
 
         private readonly Thread _workerThread;
         private readonly ManualResetEvent _stopEvent;
+        private readonly AutoResetEvent _publishEvent;
         private readonly WaitHandle[] _waitHandles;
         private long _workerCount;
 
@@ -25,7 +26,8 @@ namespace YAMB
 
             _workerThread = new Thread(DoWork);
             _stopEvent = new ManualResetEvent(false);
-            _waitHandles = new WaitHandle[] { _stopEvent };
+            _publishEvent = new AutoResetEvent(false);
+            _waitHandles = new WaitHandle[] { _stopEvent, _publishEvent };
         }
 
         public void Publish(object message)
@@ -44,6 +46,8 @@ namespace YAMB
 
                 transaction.Commit();
             }
+
+            _publishEvent.Set();
         }
 
         public void Start()

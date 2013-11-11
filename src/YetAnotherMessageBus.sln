@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMB", "YAMB\YAMB.csproj", "{5C8822DB-29AD-4790-A5EA-A925DF0B13EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMB.NHibernate", "YAMB.NHibernate\YAMB.NHibernate.csproj", "{0A84E7AB-C451-429A-B864-6B63F45A8A6C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7DBBF2C1-B973-437E-971C-BE01FDC7C312}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -18,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMB.Autofac", "YAMB.Autofa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMB.Samples", "YAMB.Samples\YAMB.Samples.csproj", "{C90DCEC4-4EFB-4EBD-81D1-BD2075D9D56F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAMB.NHibernateIntegration", "YAMB.NHibernateIntegration\YAMB.NHibernateIntegration.csproj", "{0A84E7AB-C451-429A-B864-6B63F45A8A6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +28,6 @@ Global
 		{5C8822DB-29AD-4790-A5EA-A925DF0B13EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8822DB-29AD-4790-A5EA-A925DF0B13EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8822DB-29AD-4790-A5EA-A925DF0B13EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1ECC8945-DB28-468D-B7DD-AEDE01038E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1ECC8945-DB28-468D-B7DD-AEDE01038E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ECC8945-DB28-468D-B7DD-AEDE01038E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,6 +36,10 @@ Global
 		{C90DCEC4-4EFB-4EBD-81D1-BD2075D9D56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90DCEC4-4EFB-4EBD-81D1-BD2075D9D56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C90DCEC4-4EFB-4EBD-81D1-BD2075D9D56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A84E7AB-C451-429A-B864-6B63F45A8A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
